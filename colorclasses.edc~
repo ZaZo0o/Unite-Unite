@@ -1,0 +1,166 @@
+color_classes {
+
+
+///////////////////////////////////////////////////
+//    CHANGE THE MAIN COLOR OF THE THEME HERE    //
+///////////////////////////////////////////////////
+
+// SUGGESTIONS:
+//         color: 225 77 67 255; //orange
+//         color: 123 178 56 255; //green
+//         color: 52 153 183 255; //blue
+
+   color_class {
+      name: "main_color";
+         color: 52 153 183 255; //blue
+   }
+
+///////////////////////////////////////////////////
+//               OTHER COLORS                    //
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+// MENU
+
+   color_class {
+      name: "menu_background_color";
+//      color: 54 59 63 255;
+      color: 78 85 91 255;
+
+   }
+   color_class {
+      name: "menu_title_color";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "menu_item";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "menu_item_selected";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "menu_item_disabled";
+      color: 255 255 255 200;
+   }
+
+///////////////////////////////////////////////////
+// WINDOW BORDERS
+
+   color_class {
+      name: "border_background_active";
+      color: 78 85 91 255;
+   }
+   color_class {
+      name: "border_background_unfocus";
+      color: 54 59 63 255;
+   }
+   color_class {
+      name: "border_title_active";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "border_title_unfocus";
+      color: 150 150 150 255;
+   }
+   color_class {
+      name: "border_button_active";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "border_button_unfocus";
+      color: 150 150 150 255;
+   }
+
+///////////////////////////////////////////////////
+// SHELFS
+
+   color_class {
+      name: "shelf_background_color";
+//      color: 54 59 63 255;
+      color: 78 85 91 255;
+   }
+
+///////////////////////////////////////////////////
+// PAGER
+
+   color_class {
+      name: "pager_background_color";
+      color: 78 85 91 255;
+   }
+
+///////////////////////////////////////////////////
+// DIALOG
+
+   color_class {
+      name: "dialog_base";
+//      color: 78 85 91 255;
+      color: 240 240 240 255;
+   }
+
+///////////////////////////////////////////////////
+// CHECK + RADIO
+
+   color_class {
+      name: "check_text";
+      color: 78 85 91 255;
+//      color: 240 240 240 255;
+   }
+
+   color_class {
+      name: "check_text_disable";
+      color: 78 85 91 155;
+//      color: 240 240 240 255;
+   }
+
+///////////////////////////////////////////////////
+// ILIST
+
+   color_class {
+      name: "ilist_item_base";
+//      color: 78 85 91 255;
+      color: 240 240 240 255;
+   }
+
+   color_class {
+      name: "sel_base";
+      color: 78 85 91 255;
+//      color: 240 240 240 255;
+   }
+
+///////////////////////////////////////////////////
+// WINLIST
+
+   color_class {
+      name: "winlist_item_base";
+      color: 78 85 91 255;
+//      color: 240 240 240 255;
+   }
+
+///////////////////////////////////////////////////
+// FILEMAN
+
+   color_class {
+      name: "filelist_item_base";
+//      color: 78 85 91 255;
+      color: 240 240 240 255;
+   }
+
+   color_class {
+      name: "filelist_item_base_odd";
+//      color: 78 85 91 255;
+      color: 230 230 230 255;
+   }
+
+   color_class {
+      name: "filelist_item_text";
+      color: 50 50 50 255;
+   }
+
+   color_class {
+      name: "filelist_item_text_selected";
+      color: 255 255 255 255;
+   }
+
+}
