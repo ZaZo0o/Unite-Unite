@@ -797,7 +797,7 @@ group { name: "e/widgets/border/default/border";
       program {
          signal: "mouse,in"; source: "e.event.close";
          action: STATE_SET "hover" 0.0;
-         transition: LINEAR 0.15;
+         transition: LINEAR 0.1;
          target: "close_base";
 //         target: "close2";
       }
@@ -811,7 +811,7 @@ group { name: "e/widgets/border/default/border";
       program {
          signal: "mouse,in"; source: "e.event.minimize";
          action: STATE_SET "hover" 0.0;
-         transition: LINEAR 0.15;
+         transition: LINEAR 0.1;
          target: "min_base";
       }
       program {
@@ -823,7 +823,7 @@ group { name: "e/widgets/border/default/border";
       program {
          signal: "mouse,in"; source: "e.event.maximize";
          action: STATE_SET "hover" 0.0;
-         transition: LINEAR 0.15;
+         transition: LINEAR 0.1;
          target: "max_base";
       }
       program {
