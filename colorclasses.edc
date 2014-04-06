@@ -20,33 +20,7 @@ color_classes {
 ///////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////
-// MENU
-
-   color_class {
-      name: "menu_background_color";
-//      color: 54 59 63 255;
-      color: 78 85 91 255;
-
-   }
-   color_class {
-      name: "menu_title_color";
-      color: 255 255 255 255;
-   }
-   color_class {
-      name: "menu_item";
-      color: 255 255 255 255;
-   }
-   color_class {
-      name: "menu_item_selected";
-      color: 255 255 255 255;
-   }
-   color_class {
-      name: "menu_item_disabled";
-      color: 255 255 255 200;
-   }
-
-///////////////////////////////////////////////////
-// WINDOW BORDERS
+// BORDER
 
    color_class {
       name: "border_background_active";
@@ -72,6 +46,44 @@ color_classes {
       name: "border_button_unfocus";
       color: 150 150 150 255;
    }
+
+///////////////////////////////////////////////////
+// BUTTON
+
+   color_class {
+      name: "button_text";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "button_text_disabled";
+      color: 255 255 255 155;
+   }
+
+///////////////////////////////////////////////////
+// MENU
+
+   color_class {
+      name: "menu_background_color";
+//      color: 54 59 63 255;
+      color: 78 85 91 255;
+   }
+   color_class {
+      name: "menu_title_color";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "menu_item";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "menu_item_selected";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "menu_item_disabled";
+      color: 255 255 255 200;
+   }
+
 
 ///////////////////////////////////////////////////
 // SHELFS
