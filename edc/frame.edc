@@ -19,7 +19,7 @@ group { name: "e/widgets/frame";
             rel1.offset: 2 0;
             rel1.to_y: "top";
             rel2.offset: -3 -3;
-            color: 64 64 64 255;
+/*            color: 64 64 64 255;*/
          }
       }
       part { name: "top";

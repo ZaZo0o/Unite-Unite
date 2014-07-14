@@ -1,5 +1,4 @@
 group { name: "e/ilist";
-   images.image: "darken_rounded_square.png" COMP;
    parts {
       part { name: "typebuf_clip"; type: RECT;
          description { state: "default" 0.0;
@@ -11,30 +10,15 @@ group { name: "e/ilist";
             color: 255 255 255 255;
          }
       }
-/*      part { name: "bevel"; mouse_events: 0;*/
-/*         clip_to: "typebuf_clip";*/
-/*         description { state: "default" 0.0;*/
-/*            rel1.offset: -15 -15;*/
-/*            rel1.to: "e.text.label";*/
-/*            rel2.offset: 14 14;*/
-/*            rel2.to: "e.text.label";*/
-/*            image.normal: "darken_rounded_square.png";*/
-/*            image.border: 15 15 15 15;*/
-/*            fill.smooth: 0;*/
-/*         }*/
-/*      }*/
       part { name: "e.text.label"; type: TEXT; mouse_events: 0;
          clip_to: "typebuf_clip";
-/*         effect: SHADOW BOTTOM;*/
          scale: 1;
          description { state: "default" 0.0;
             rel1.relative: 0.5 0.5;
             rel1.offset: -8 -8;
             rel2.relative: 0.5 0.5;
             rel2.offset: 7 7;
-            color: 255 255 255 255;
-/*            color3: 0 0 0 128;*/
-/*            color_class: "ilist_typebuf";*/
+            color_class: "list_item_text";
             text { font: FNBD; size: 10;
                min: 1 1;
                align: 0.5 0.5;
@@ -60,41 +44,25 @@ group { name: "e/ilist";
 }
 
 group { name: "e/widgets/ilist";
-//   data.item: "stacking" "above";
    data.item: "stacking" "below";
    data.item: "selectraise" "on";
-   images.image: "bevel_curved_horiz_out.png" COMP;
-   images.image: "shadow_rounded_horiz.png" COMP;
-   images.image: "vgrad_med_dark.png" COMP;
-   images.image: "bevel_horiz_out.png" COMP;
-   images.image: "shine.png" COMP;
    parts {
       part { name: "base"; type: RECT; mouse_events: 0;
          description { state: "default" 0.0;
-            color_class: "ilist_item_base";
+            color_class: "list_item_base";
          }
       }
-/*      part { name: "sel_shadow"; mouse_events: 0;*/
-/*         description { state: "default" 0.0;*/
-/*            image.normal: "shadow_rounded_horiz.png";*/
-/*            image.border: 0 0 9 9;*/
-/*            rel1.offset: 0 -4;*/
-/*            rel2.offset: -1 5;*/
-/*            fill.smooth: 0;*/
-/*            visible: 0;*/
-/*         }*/
-/*         description { state: "selected" 0.0;*/
-/*            inherit: "default" 0.0;*/
-/*            visible: 1;*/
-/*         }*/
-/*      }*/
-      part { name: "sel_base"; mouse_events: 0; type: RECT;
+      part { name: "sel_base"; type: RECT; mouse_events: 0;
          description { state: "default" 0.0;
             color_class: "main_color";
+            rel1.offset: 6 6;
+            rel2.offset: -6 -6;
             visible: 0;
          }
          description { state: "selected" 0.0;
             inherit: "default" 0.0;
+            rel1.offset: 0 0;
+            rel2.offset: 0 0;
             visible: 1;
          }
       }
@@ -108,7 +76,6 @@ group { name: "e/widgets/ilist";
          }
       }
       part { name: "e.text.label"; type: TEXT; mouse_events: 0;
-/*         effect: SHADOW BOTTOM;*/
          scale: 1;
          description { state: "default" 0.0;
             rel1.offset: 2 3;
@@ -117,9 +84,7 @@ group { name: "e/widgets/ilist";
             rel2.offset: -3 -3;
             rel2.relative: 0.0 1.0;
             rel2.to_x: "e.swallow.end";
-            color: 255 255 255 255;
-/*            color3: 0 0 0 128;*/
-            color_class: "ilist_item";
+            color_class: "list_item_text";
             text { font: FN; size: 10;
                min: 1 1;
                align: 0.0 0.5;
@@ -136,14 +101,11 @@ group { name: "e/widgets/ilist";
          }
       }
       part { name: "label2"; type: TEXT; mouse_events: 0;
-/*         effect: SHADOW BOTTOM;*/
          scale: 1;
          description { state: "default" 0.0;
             rel1.to: "e.text.label";
             rel2.to: "e.text.label";
-            color: 21 21 21 255;
-/*            color3: 255 255 255 25;*/
-            color_class: "ilist_item_disabled";
+            color_class: "list_item_text_disabled";
             text { font: FN; size: 10;
                text_source: "e.text.label";
                align: 0.0 0.5;
@@ -161,17 +123,11 @@ group { name: "e/widgets/ilist";
          }
       }
       part { name: "label3"; type: TEXT; mouse_events: 0;
-/*         effect: GLOW;*/
          scale: 1;
          description { state: "default" 0.0;
-            rel1.offset: -2 -3;
             rel1.to: "e.text.label";
-            rel2.offset: 2 1;
             rel2.to: "e.text.label";
-            color: 51 153 255 255;
-/*            color2: 51 153 255 24;*/
-/*            color3: 51 153 255 18;*/
-            color_class: "ilist_item_selected";
+            color_class: "list_item_text_selected";
             text { font: FN; size: 10;
                text_source: "e.text.label";
                align: 0.0 0.5;
@@ -197,22 +153,6 @@ group { name: "e/widgets/ilist";
             rel2.offset: -3 -3;
          }
       }
-/*      part { name: "sel_shine"; mouse_events: 0;*/
-/*         description { state: "default" 0.0;*/
-/*            image.normal: "shine.png";*/
-/*            rel1.offset: 0 -2;*/
-/*            rel1.to: "sel_base";*/
-/*            rel2.relative: 1.0 0.0;*/
-/*            rel2.offset: -1 2;*/
-/*            rel2.to: "sel_base";*/
-/*            FIXED_SIZE(69, 5)*/
-/*            visible: 0;*/
-/*         }*/
-/*         description { state: "selected" 0.0;*/
-/*            inherit: "default" 0.0;*/
-/*            visible: 1;*/
-/*         }*/
-/*      }*/
       part { name: "event"; type: RECT;
          description { state: "default" 0.0;
             color: 0 0 0 0;
@@ -227,6 +167,7 @@ group { name: "e/widgets/ilist";
       program {
          signal: "e,state,selected"; source: "e";
          action: STATE_SET "selected" 0.0;
+         transition: LINEAR 0.1;
          target: "sel_base";
          target: "e.text.label";
          target: "label2";
@@ -260,15 +201,14 @@ group { name: "e/widgets/ilist";
 }
 
 group { name: "e/widgets/ilist_odd";
-/*   inherit: "e/widgets/ilist";*/
-/*   parts {*/
-/*      part { name: "base";*/
-/*         description { state: "default" 0.0;*/
-/*            //color: 56 56 56 255;*/
-/*            color_class: "ilist_item_base";*/
-/*         }*/
-/*      }*/
-/*   }*/
+   inherit: "e/widgets/ilist";
+   parts {
+      part { name: "base";
+         description { state: "default" 0.0;
+            color_class: "list_item_base_odd";
+         }
+      }
+   }
 }
 
 group { name: "e/widgets/ilist_header";
@@ -280,21 +220,21 @@ group { name: "e/widgets/ilist_header";
    parts {
       part { name: "base"; type: RECT; mouse_events: 0;
          description { state: "default" 0.0;
-            color_class: "ilist_item_base";
+            color_class: "list_item_base";
          }
       }
-/*      part { name: "pat";*/
-/*         description { state: "default" 0.0;*/
-/*            image.normal: "dot_pattern.png";*/
-/*            TILED_PATTERN(256, 256)*/
-/*         }*/
-/*      }*/
-/*      part { name: "shadow"; mouse_events: 0;*/
-/*         description { state: "default" 0.0;*/
-/*            image.normal: "shadow_vertical_dark.png";*/
-/*            color: 255 255 255 128;*/
-/*         }*/
-/*      }*/
+      part { name: "pat";
+         description { state: "default" 0.0;
+            image.normal: "dot_pattern.png";
+            TILED_PATTERN(256, 256)
+         }
+      }
+      part { name: "shadow"; mouse_events: 0;
+         description { state: "default" 0.0;
+            image.normal: "shadow_vertical_dark.png";
+            color: 255 255 255 128;
+         }
+      }
       part { name: "e.swallow.icon"; type: SWALLOW; mouse_events: 0;
          description { state: "default" 0.0;
             align: 0.0 0.5;
@@ -333,14 +273,6 @@ group { name: "e/widgets/ilist_header";
             rel2.offset: -3 -3;
          }
       }
-/*      part { name: "shadow2"; mouse_events: 0;*/
-/*         description { state: "default" 0.0;*/
-/*            image.normal: "inset_shadow.png";*/
-/*            image.border: 5 5 7 3;*/
-/*            image.middle: 0;*/
-/*            fill.smooth: 0;*/
-/*         }*/
-/*      }*/
    }
 }
 

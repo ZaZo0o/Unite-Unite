@@ -15,6 +15,12 @@ color_classes {
          color: 52 153 183 255; //blue
    }
 
+
+   color_class {
+      name: "list_item_base_odd";
+      color: 52 153 183 25; //blue
+   }
+
 ///////////////////////////////////////////////////
 //               OTHER COLORS                    //
 ///////////////////////////////////////////////////
@@ -141,6 +147,7 @@ color_classes {
 //      color: 240 240 240 255;
    }
 
+
 ///////////////////////////////////////////////////
 // WINLIST
 
@@ -154,25 +161,32 @@ color_classes {
 // FILEMAN
 
    color_class {
-      name: "filelist_item_base";
-//      color: 78 85 91 255;
+      name: "fileman_base";
       color: 240 240 240 255;
    }
 
    color_class {
-      name: "filelist_item_base_odd";
-//      color: 78 85 91 255;
-      color: 230 230 230 255;
+      name: "scrollframe_base";
+      color: 255 255 255 255;
    }
 
    color_class {
-      name: "filelist_item_text";
+      name: "list_item_base";
+      color: 255 255 255 0;
+   }
+
+   color_class {
+      name: "list_item_text";
       color: 78 85 91 255;
    }
 
    color_class {
-      name: "filelist_item_text_selected";
+      name: "list_item_text_selected";
       color: 255 255 255 255;
    }
 
+   color_class {
+      name: "list_item_text_disable";
+      color: 255 255 255 200;
+   }
 }
