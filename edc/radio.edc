@@ -12,6 +12,7 @@ group { name: "e/widgets/radio";
             min: 14 14;
             max: 14 14;
          }
+
          description { state: "disabled" 0.0;
             inherit: "default" 0.0;
             color: 100 100 100 100;

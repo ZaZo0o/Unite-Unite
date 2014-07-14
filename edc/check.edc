@@ -18,6 +18,7 @@ group { name: "e/widgets/check";
          }
       }
 
+
       part { name: "clip"; type: RECT;
          description { state: "default" 0.0;
          }

@@ -15,7 +15,6 @@ color_classes {
          color: 52 153 183 255; //blue
    }
 
-
    color_class {
       name: "list_item_base_odd";
       color: 52 153 183 25; //blue
