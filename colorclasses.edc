@@ -188,4 +188,9 @@ color_classes {
       name: "list_item_text_disable";
       color: 255 255 255 200;
    }
+
+   color_class {
+      name: "file_item_text";
+      color: 78 85 91 255;
+   }
 }
