@@ -381,29 +381,29 @@ group { name: "e/comp/border/default";
          signal: "e,state,focus,on"; source: "e";
          action: STATE_SET "focused" 0.0;
          transition: SINUSOIDAL 0.1;
-         target: "glow";
+/*         target: "glow";*/
          target: "focus-clipper";
-         after: "focus2";
+/*         after: "focus2";*/
       }
-      program { name: "focus2";
-         action: STATE_SET "default" 0.0;
-         transition: SINUSOIDAL 0.4;
-         target: "glow";
-      }
+/*      program { name: "focus2";*/
+/*         action: STATE_SET "default" 0.0;*/
+/*         transition: SINUSOIDAL 0.4;*/
+/*         target: "glow";*/
+/*      }*/
       program {
          name: "focus_off";
          signal: "e,state,focus,off"; source: "e";
          action: STATE_SET "default" 0.0;
          transition: SINUSOIDAL 0.1;
          target: "focus-clipper";
-         after: "focus_off2";
+/*         after: "focus_off2";*/
       }
-      program {
-         name: "focus_off2";
-         action: STATE_SET "default" 0.0;
-         transition: SINUSOIDAL 0.4;
-         target: "glow";
-      }
+/*      program {*/
+/*         name: "focus_off2";*/
+/*         action: STATE_SET "default" 0.0;*/
+/*         transition: SINUSOIDAL 0.4;*/
+/*         target: "glow";*/
+/*      }*/
       program { name: "urgent1";
          signal: "e,state,urgent,on"; source: "e";
          action: STATE_SET "focused" 0.0;
