@@ -320,87 +320,32 @@ group { name: "e/fileman/default/icon/fixed";
    images.image: "sym_icon_op_move.png" COMP;
    styles {
       style { name: "fileman_icon_name";
-         base: "font="FN" font_size=10 text_class=fileman_icon align=center color=#ffffffff wrap=mixed style=shadow,bottom shadow_color=#00000080 align=center ellipsis=1.0";
+         base: "font="FN" font_size=11 text_class=fileman_icon align=center color=#4e555bff wrap=mixed , align=center ellipsis=1.0";
       }
       style { name: "fileman_icon_name_selected";
-         base: "font="FN" font_size=10 text_class=fileman_icon align=center color=#3399ffff wrap=mixed style=glow glow_color=#3399ff18 align=center glow2_color=#3399ff12 ellipsis=1.0";
+         base: "font="FN" font_size=11 text_class=fileman_icon align=center color=#ffffffff wrap=mixed align=center ellipsis=1.0";
       }
    }
    script {
       public longpressed;
    }
    parts {
-      part { name: "shadow"; mouse_events: 0;
+
+      part { name: "sel_base"; type: RECT; mouse_events: 0;
          description { state: "default" 0.0;
-            image.normal: "shadow_square_tiny.png";
-            image.border: 6 6 6 6;
-            fill.smooth: 0;
-            rel1.offset: -3 -2;
-            rel1.to: "sel_base";
-            rel2.offset: 2 3;
-            rel2.to: "sel_base";
-            fill.smooth: 0;
+            color_class: "main_color";
+            rel1.offset: 6 6;
+            rel2.offset: -6 -6;
             visible: 0;
          }
          description { state: "selected" 0.0;
             inherit: "default" 0.0;
+            rel1.offset: 0 0;
+            rel2.offset: 0 0;
             visible: 1;
          }
       }
-      part { name: "sel_glow"; mouse_events: 0;
-         description { state: "default" 0.0;
-            rel1.to: "sel_base";
-            rel2.to: "sel_base";
-            image.normal: "glow_small.png";
-            image.border: 7 7 7 7;
-            fill.smooth: 0;
-            color: 255 255 255 0;
-            visible: 0;
-         }
-         description { state: "visible" 0.0;
-            inherit: "default" 0.0;
-            rel1.offset: -4 -4;
-            rel2.offset: 3 3;
-            color: 255 255 255 128;
-            visible: 1;
-         }
-         description { state: "hilighted" 0.0;
-            inherit: "default" 0.0;
-            rel1.offset: -4 -4;
-            rel2.offset: 3 3;
-            color: 255 255 255 255;
-            visible: 1;
-         }
-      }
-      part { name: "sel_base"; mouse_events: 0;
-         description { state: "default" 0.0;
-            rel1.offset: 2 2;
-            rel2.offset: -3 -3;
-            image.normal: "vgrad_med_dark.png";
-            fill.smooth: 0;
-            TILED_HORIZ(120)
-            visible: 0;
-         }
-         description { state: "selected" 0.0;
-            inherit: "default" 0.0;
-            visible: 1;
-         }
-      }
-      part { name: "sel_bevel"; mouse_events: 0;
-         description { state: "default" 0.0;
-            rel1.to: "sel_base";
-            rel2.to: "sel_base";
-            image.normal: "bevel_out.png";
-            image.border: 1 1 1 1;
-            image.middle: 0;
-            fill.smooth: 0;
-            visible: 0;
-         }
-         description { state: "selected" 0.0;
-            inherit: "default" 0.0;
-            visible: 1;
-         }
-      }
+
 //////////////////////////////      
       part { name: "label0"; type: SPACER;
          scale: 1;
@@ -563,23 +508,6 @@ group { name: "e/fileman/default/icon/fixed";
          }
       }
 //////////////////////////////      
-      part { name: "sel_shine"; mouse_events: 0;
-         description { state: "default" 0.0;
-            image.normal: "shine.png";
-            rel1.offset: 0 -2;
-            rel1.to: "sel_base";
-            rel2.relative: 1.0 0.0;
-            rel2.offset: -1 2;
-            rel2.to: "sel_base";
-            FIXED_SIZE(69, 5)
-            visible: 0;
-         }
-         description { state: "selected" 0.0;
-            inherit: "default" 0.0;
-            visible: 1;
-         }
-      }
-//////////////////////////////      
       part { name: "event"; type: RECT;
          ignore_flags: ON_HOLD;
          description { state: "default" 0.0;
@@ -612,35 +540,17 @@ group { name: "e/fileman/default/icon/fixed";
       program {
          signal: "e,state,selected"; source: "e";
          action: STATE_SET "selected" 0.0;
+         transition: LINEAR 0.1;
          target: "e.text.label";
          target: "label2";
-         target: "shadow";
          target: "sel_base";
-         target: "sel_bevel";
-         target: "sel_shine";
-      }
-      program {
-         signal: "e,state,selected"; source: "e";
-         action: STATE_SET "hilighted" 0.0;
-         transition: DECELERATE 0.2;
-         target: "sel_glow";
-         after: "sel2";
-      }
-      program { name: "sel2";
-         action: STATE_SET "visible" 0.0;
-         transition: SINUSOIDAL 0.3;
-         target: "sel_glow";
       }
       program {
          signal: "e,state,unselected"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.text.label";
          target: "label2";
-         target: "shadow";
          target: "sel_base";
-         target: "sel_bevel";
-         target: "sel_shine";
-         target: "sel_glow";
       }
       program {
          signal: "mouse,down,1"; source: "label_event";
