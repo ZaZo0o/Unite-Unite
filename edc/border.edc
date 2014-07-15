@@ -811,14 +811,12 @@ group { name: "e/widgets/border/default/border";
          action: STATE_SET "selected" 0.0;
          target: "close1";
          target: "close2";
-         target: "close_base";
       }
       program {
          signal: "mouse,up,*"; source: "e.event.close";
          action: STATE_SET "default" 0.0;
          target: "close1";
          target: "close2";
-         target: "close_base";
       }
       program {
          signal: "mouse,down,*"; source: "e.event.maximize";
@@ -837,14 +835,12 @@ group { name: "e/widgets/border/default/border";
          action: STATE_SET "selected" 0.0;
          target: "min1";
          target: "min2";
-         target: "min_base";
       }
       program {
          signal: "mouse,up,*"; source: "e.event.minimize";
          action: STATE_SET "default" 0.0;
          target: "min1";
          target: "min2";
-         target: "min_base";
       }
       program {
          signal: "mouse,in"; source: "e.event.close";
